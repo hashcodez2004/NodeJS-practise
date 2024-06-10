@@ -35,3 +35,14 @@ const fs = require("fs");
 
 // fs.mkdirSync("my-docs"); //creates new directory
 // fs.rmdirSync("my-docs"); //deletes any empty directory...But for non-empty directories use same with recursive option set to true
+
+
+//------------------Blocking v/s Non Blocking Operations---------------
+
+//in case of blocking operation the further computation is blocked until it has been executed...therefore the result is in the normal flow
+// console.log('1');
+// const result = fs.readFileSync("./test.txt","utf-8");
+// console.log(result);
+// console.log("2");
+
+//whereas in case of non-blocking operations the all the tasks are executed first and whenever the operation is done then only the result is executed....that is it doesnt follow the normal execution
